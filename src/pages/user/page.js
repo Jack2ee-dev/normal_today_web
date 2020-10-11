@@ -74,11 +74,11 @@ const User = ({ location, history }) => {
   const closeDatePicker = () => setIsDatePickerOpen(false);
 
   const selectDate = (date) => {
-    const birthDateFormat = `${date
+    const birthDateFormatted = `${date
       .toISOString()
       .substring(0, 10)
       .replaceAll('-', '.')}.`;
-    handleUserDetailInput('birthDate', birthDateFormat);
+    handleUserDetailInput('birthDate', birthDateFormatted);
     setIsDatePickerOpen(false);
   };
 

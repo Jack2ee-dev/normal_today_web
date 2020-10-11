@@ -18,10 +18,18 @@ export const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
   color: black;
 `;
 
 export const StyledNavItem = styled.div`
   width: 100%;
+  display: inline;
   text-align: center;
 `;
