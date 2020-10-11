@@ -61,9 +61,6 @@ const User = ({ location, history }) => {
     }
   };
 
-  console.log(authState);
-  console.log(existingUserDetail);
-
   const handleUserDetailInput = (key, value) => {
     const changedUserDetail = {
       ...existingUserDetail,

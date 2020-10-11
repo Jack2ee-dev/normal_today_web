@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import NavItem from './navItem';
+import { StyledNavbar, StyledNavItem } from './styled';
 
 const PAGE_INCLUDING_NAVBAR = [
   '/today',
@@ -30,8 +31,20 @@ const NAVITEMS = [
 ];
 
 const Navbar = (props) => {
-  console.log(props);
-  return <></>;
+  return (
+    <StyledNavbar>
+      {NAVITEMS.map(({ path, name }, key) => (
+        <NavItem
+          key={key}
+          data={{
+            navItemCount: NAVITEMS.length,
+            path: path,
+            name: name,
+          }}
+        />
+      ))}
+    </StyledNavbar>
+  );
 };
 
 export default Navbar;

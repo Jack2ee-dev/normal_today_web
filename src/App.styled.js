@@ -2,7 +2,5 @@ import styled from 'styled-components';
 
 export const AppWrapper = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 `;
-
-export const AppNavbar = styled.div``;

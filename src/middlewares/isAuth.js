@@ -20,8 +20,6 @@ const IsAuth = (props) => {
     }
   }, [authToken]);
 
-  console.log(authState);
-
   return <>{props.children}</>;
 };
 

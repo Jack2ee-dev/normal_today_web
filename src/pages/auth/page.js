@@ -18,8 +18,6 @@ const Auth = () => {
     dispatch: authDispatch,
   } = useContext(AuthContext);
 
-  console.log(authState);
-
   const postKakaoAuthenticationData = async (data) => {
     const { response } = data;
     authDispatch({ type: 'START_AUTHENTICATION' });
