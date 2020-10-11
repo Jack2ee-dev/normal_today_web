@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import NavItem from './navItem';
 import { StyledNavbar, StyledNavItem } from './styled';
 
-const PAGE_INCLUDING_NAVBAR = [
+export const PAGE_INCLUDING_NAVBAR = [
   '/today',
   '/plan',
   '/calendar',
@@ -30,8 +30,13 @@ const NAVITEMS = [
   },
 ];
 
-const Navbar = (props) => {
-  return (
+let Components;
+if (
+  !PAGE_INCLUDING_NAVBAR.includes(window.location.pathname)
+)
+  Components = () => null;
+else
+  Components = () => (
     <StyledNavbar>
       {NAVITEMS.map(({ path, name }, key) => (
         <NavItem
@@ -45,6 +50,10 @@ const Navbar = (props) => {
       ))}
     </StyledNavbar>
   );
+console.log(window.location.pathname);
+
+const Navbar = (props) => {
+  return <Components />;
 };
 
 export default Navbar;
