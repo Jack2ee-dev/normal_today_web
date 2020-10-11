@@ -8,6 +8,8 @@ const AuthStore = (props) => {
   const [state, dispatch] = useReducer(authReducer, {
     status: 'INIT_AUTHENTICATION',
     authToken: null,
+    name: null,
+    userId: null,
     loading: false,
     authRedirectTo: null,
   });

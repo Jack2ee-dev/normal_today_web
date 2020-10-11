@@ -18,6 +18,8 @@ const Auth = () => {
     dispatch: authDispatch,
   } = useContext(AuthContext);
 
+  console.log(authState);
+
   const postKakaoAuthenticationData = async (data) => {
     const { response } = data;
     authDispatch({ type: 'START_AUTHENTICATION' });
@@ -36,7 +38,9 @@ const Auth = () => {
       authDispatch({
         type: 'SUCCEED_AUTHENTICATION',
         authToken,
-        authRedirectTo: newUser ? '/my' : '/',
+        authRedirectTo: newUser
+          ? '/user/detail?mode=init'
+          : '/',
       });
     } catch (error) {
       console.log(error);

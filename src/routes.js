@@ -7,6 +7,8 @@ import CALENDAR_PAGE from './pages/calendar/page';
 import PLAN_PAGE from './pages/plan/page';
 import TODAY_PAGE from './pages/today/page';
 import MY_PAGE from './pages/my/page';
+import USER_PAGE from './pages/user/page';
+import Navbar from './components/navbar/navbar';
 
 const routes = [
   {
@@ -43,6 +45,12 @@ const routes = [
     path: '/my',
     name: '나',
     container: MY_PAGE,
+    exact: true,
+  },
+  {
+    path: '/user/detail',
+    name: '유저 추가 정보',
+    container: USER_PAGE,
     exact: true,
   },
 ];
